@@ -61,7 +61,7 @@ def strseconde(temps):
 
 def afficheTemps(temps):
     print(strJour(temps) + strHeure(temps) + strminute(temps) + strseconde(temps))
-    
+
 
 afficheTemps((1, 0, 14, 23))
 
@@ -91,3 +91,6 @@ def sommeTemps(temps1, temps2):
 
 
 print(afficheTemps(sommeTemps((2, 3, 4, 25), (5, 22, 57, 1))))
+
+
+def proportionTemps(temps, proportion):
