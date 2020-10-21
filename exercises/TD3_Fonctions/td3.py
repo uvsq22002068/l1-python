@@ -23,6 +23,49 @@ seconde = 100000
 print(secondeEnTemps(seconde))
 
 
+def strJour(temps):
+    if temps[0] == 0:
+        return " "
+    elif temps[0] == 1:
+        return "un jour"
+    else:
+        return str(temps[0]) + " jours"
+
+
+def strHeure(temps):
+    if temps[1] == 0:
+        return " "
+    elif temps[1] == 1:
+        return " , une heure"
+    else:
+        return ", " + str(temps[1]) + " heures"
+
+
+def strminute(temps):
+    if temps[2] == 0:
+        return " "
+    elif temps[2] == 1:
+        return " , une minute"
+    else:
+        return ", " + str(temps[2]) + " minutes"
+
+
+def strseconde(temps):
+    if temps[3] == 0:
+        return " "
+    elif temps[3] == 1:
+        return " , une seconde "
+    else:
+        return ", " + str(temps[3]) + " secondes"
+
+
+def afficheTemps(temps):
+    print(strJour(temps) + strHeure(temps) + strminute(temps) + strseconde(temps))
+    
+
+afficheTemps((1, 0, 14, 23))
+
+
 def demandeTemps():
     jour = int(input("définir un nombre de jours"))
     heure = int(input("définir un nombre  d'heures"))
@@ -43,8 +86,8 @@ demandeTemps()
 
 
 def sommeTemps(temps1, temps2):
-    somme = tempsEnSeconde(temps1)+tempsEnSeconde(temps2)
-    return secondeEnTemps(somme)
+    Stemps = tempsEnSeconde(temps1) + tempsEnSeconde(temps2)
+    return secondeEnTemps(Stemps)
 
 
-sommeTemps((2, 3, 4, 25), (5, 22, 57, 1))
+print(afficheTemps(sommeTemps((2, 3, 4, 25), (5, 22, 57, 1))))
